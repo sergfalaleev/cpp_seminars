@@ -1,5 +1,5 @@
 #include <iostream>
-bool Deposit(int &sum) {
+bool deposit(int &sum) {
   int k = 0;
   std::cin >> k;
   if (k <= 0) {
@@ -9,7 +9,7 @@ bool Deposit(int &sum) {
   return true;
 }
 
-bool Withdraw(int &sum) {
+bool withdraw(int &sum) {
   int k = 0;
   std::cin >> k;
   if (k > sum or k <= 0) {
@@ -19,25 +19,25 @@ bool Withdraw(int &sum) {
   return true;
 }
 
-bool Balance(int &sum) {
+bool balance(int &sum) {
   std::cout << sum << "\n";
   return true;
 }
 
-bool Reset(int &sum) {
+bool reset(int &sum) {
   sum = 0;
   return true;
 }
 
-bool Increase(int &sum) {
+bool increase(int &sum) {
   sum++;
   return true;
 }
 
 int main() {
   const char commands[] = {'d', 'w', 'b', 'r', 'i'};
-  bool (*const functions[])(int &sum) = {Deposit, Withdraw, Balance, Reset,
-                                         Increase};
+  bool (*const functions[])(int &sum) = {deposit, withdraw, balance, reset,
+                                         increase};
   int sum = 0;
   const int cntFunc = sizeof(commands);
   char cmd[20];
