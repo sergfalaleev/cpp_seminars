@@ -2,6 +2,13 @@
 
 Учёт парка кикшеринга.
 
+## Сборка и запуск
+
+```sh
+clang++ -std=c++17 -Wall main.cpp -o fleet
+./fleet < tests/example.in
+```
+
 ## Команды
 
 `add scooter|ebike id name energy score`, `add bike id name score`, `add helmet id name`,
